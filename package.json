@@ -12,7 +12,7 @@
   },
   "author": "Ankit Jangra",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
