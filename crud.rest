@@ -6,7 +6,7 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "firstName":"Ankityid",
+    "firstName":"Ankit",
     "lastName":"Jangra",
     "registeredDate":"2022-07-30"
 }
