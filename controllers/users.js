@@ -58,5 +58,8 @@ export const translateText = async (req,res) => {
         res.status(200).json({message:response})
    
     })
-    .catch((error)=> res.status(500).json({message:error.message}))
+    .catch((error)=> {
+        console.log(error)
+        res.status(500).json({message:error.message})  
+    })
 }
