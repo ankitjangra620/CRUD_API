@@ -31,9 +31,8 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:5000/users/translate
+POST https://crud-api-users.herokuapp.com/users/translate
 Content-Type: application/json
-
 {
     "text":"Ankit"
 }
