@@ -20,6 +20,10 @@ const app = express();
 //middlewares
 app.use(bodyParser.json());
 app.use('/users',userRoutes)
+app.use(function(req, res, next) {
+    res.setTimeout(200);
+    next();
+});
 
 const PORT = process.env.PORT || 5000;
 
