@@ -53,6 +53,10 @@ export const deleteUser = async (req,res) =>{
 export const translateText = async (req,res) => {
     console.log(req.body)
     await translate(req.body.text, { from: 'en', to: 'hi' })
-    .then(response=>res.status(200).json({message:response}))
+    .then(response=>{
+        console.log(response)
+        res.status(200).json({message:response})
+   
+    })
     .catch((error)=> res.status(500).json({message:error.message}))
 }
