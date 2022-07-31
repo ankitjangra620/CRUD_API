@@ -1,5 +1,7 @@
 import users from '../models/users.js'
 import bodyParser from 'body-parser'
+import {translate} from 'free-translate'
+import { response } from 'express'
 
 export const getUsers = async (req,res) =>{
     try {
@@ -47,4 +49,9 @@ export const deleteUser = async (req,res) =>{
     } catch (error) {
         res.status(500).json({message:error.message})
     }
+}
+export const translateText = async (req,res) => {
+    await translate(req.body.text, { from: 'en', to: 'hi' })
+    .then(response=>res.status(200).json({message:response}))
+    .catch((error)=> res.status(500).json({message:error.message}))
 }

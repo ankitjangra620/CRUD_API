@@ -28,3 +28,12 @@ Content-Type: application/json
     "firstName":"Yogesh gandu",
     "lastName" :"Nokhwal"
 }
+
+###
+
+POST http://localhost:5000/users/translate
+Content-Type: application/json
+
+{
+    "text":"Ankit"
+}
