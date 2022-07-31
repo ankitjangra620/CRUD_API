@@ -5,7 +5,7 @@ import { response } from 'express'
 
 export const translateText = async (req,res) => {
     console.log(req.params.text)
-    await translate(req.params.text, { from: 'en', to: 'hi' })
+    translate(req.params.text,{ from: 'en', to: 'hi' })
     .then(response=>{
         console.log(response)
         res.status(200).json({m:response})

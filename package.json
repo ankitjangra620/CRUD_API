@@ -19,8 +19,11 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "free-translate": "^0.6.1",
+    "google-translate": "^3.0.0",
+    "google-translate-free": "^2.4.5",
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.0",
+    "translate": "^1.4.1",
     "transliteration": "^2.3.5"
   },
   "devDependencies": {
