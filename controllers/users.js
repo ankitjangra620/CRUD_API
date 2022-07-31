@@ -3,6 +3,20 @@ import bodyParser from 'body-parser'
 import {translate} from 'free-translate'
 import { response } from 'express'
 
+export const translateText = async (req,res) => {
+    console.log(req.params.text)
+    await translate(req.params.text, { from: 'en', to: 'hi' })
+    .then(response=>{
+        console.log(response)
+        res.status(200).json({m:response})
+   
+    })
+    .catch((error)=> {
+        console.log(error)
+        res.status(500).json({message:error.message})  
+    })
+}
+
 export const getUsers = async (req,res) =>{
     try {
         res.json(await users.find())
@@ -49,17 +63,4 @@ export const deleteUser = async (req,res) =>{
     } catch (error) {
         res.status(500).json({message:error.message})
     }
-}
-export const translateText = async (req,res) => {
-    console.log(req.body)
-    await translate(req.body.text, { from: 'en', to: 'hi' })
-    .then(response=>{
-        console.log(response)
-        res.status(200).json({message:response})
-   
-    })
-    .catch((error)=> {
-        console.log(error)
-        res.status(500).json({message:error.message})  
-    })
 }

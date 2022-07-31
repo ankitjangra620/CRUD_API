@@ -2,11 +2,11 @@ GET http://localhost:5000/users
 
 ###
 
-POST http://localhost:5000/users
+POST  https://crud-api-users.herokuapp.com/users
 Content-Type: application/json
 
 {
-    "firstName":"Ankit",
+    "firstName":"Ankiqrewfgrdbft",
     "lastName":"Jangra",
     "registeredDate":"2022-07-30"
 }
@@ -31,9 +31,13 @@ Content-Type: application/json
 
 ###
 
-POST https://crud-api-users.herokuapp.com/users/translate
-
+POST https://crud-api-users.herokuapp.com/users/translate   
 Content-Type: application/json
+
 {
-    "text":"Ankit"
+    "text":"Jangra"
 }
+
+###
+
+GET http://localhost:5000/users/translate/Ankit
